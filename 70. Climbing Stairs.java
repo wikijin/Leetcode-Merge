@@ -4,10 +4,12 @@
 	每次你只能爬一步或者两步。求有多少种不同的方式爬到梯子顶端。
 
 思路：
-	递归（recursion）与动态规划（DP）
-
-Time Complexity : O(n)
-Space Complexity : O(n)
+	递归（recursion）
+		Time Complexity : O(n)
+		Space Complexity : O(n)
+	动态规划（DP）
+		Time Complexity : O(n)
+		Space Complexity : O(n)
 */
 class Solution {
 	public int climbStairs(int n) {
