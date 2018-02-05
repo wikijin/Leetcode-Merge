@@ -24,9 +24,11 @@ public class _72_Edit_Distance {
          dp[i][j]表示的是，从字符串1的i的位置转换到字符串2的j的位置，所需要的最少步数。
          1,字符串中的字符相等: dp[i][j] = dp[i - 1][j - 1]
          2,字符串中的字符不等:
-         insert: dp[i][j] = dp[i][j - 1] + 1;
-         replace: dp[i][j] = dp[i - 1][j - 1] + 1;
-         delete: dp[i][j] = dp[i - 1][j] + 1;
+
+        状态转移方程：
+            insert: dp[i][j] = dp[i][j - 1] + 1;
+            replace: dp[i][j] = dp[i - 1][j - 1] + 1;
+            delete: dp[i][j] = dp[i - 1][j] + 1;
          a  b  c  d
          0  1  2  3  4
          a  1  0  1  2  3
