@@ -1,44 +1,22 @@
-### 题意
+package leetcode;
 
-给出一棵二叉树，返回其节点值从底向上的层次序遍历（按从叶节点所在层到根节点所在的层遍历，然后逐层从左往右遍历）
-
-样例
-
-给出一棵二叉树 `{3,9,20,null,null,15,7}`,
-
-```
-    3
-   / \
-  9  20
-    /  \
-   15   7
-```
-
-按照从下往上的层次遍历为：
-
-```
-[
-  [15,7],
-  [9,20],
-  [3]
-]
-```
-
-### 思路
-
-思路一： 使用`queue`后续遍历
-
-思路二： 使用`helper`函数进行后续遍历，并添加参数`level`来判断在某个`list`中添加。
-
-### 复杂度
-
-时间复杂度：O(n)
-
-空间复杂度：O(n)
-
-```java
+import java.util.*;
+/**
+ * Project Name : Leetcode
+ * Package Name : leetcode
+ * File Name : BinaryTreeLevelOrderTreaversalII
+ * Creator : Edward
+ * Date : Sep, 2017
+ * Description : 107. Binary Tree Level Order Traversal II  (102 follow up)
+ */
 public class BinaryTreeLevelOrderTraversalII {
-    // queue思路
+
+    /**
+     *
+     * @param root
+     * @return
+     */
+
     public static List<List<Integer>> levelOrderBottom(TreeNode root) {
         List<List<Integer>> res = new ArrayList<>();
         if (root == null) return res;
@@ -57,7 +35,7 @@ public class BinaryTreeLevelOrderTraversalII {
         }
         return res;
     }
-    // helper 思路
+
     public static List<List<Integer>> levelOrderBottom2(TreeNode root) {
         List<List<Integer>> res = new ArrayList<>();
         if (root == null) return res;
@@ -77,5 +55,3 @@ public class BinaryTreeLevelOrderTraversalII {
     }
 
 }
-```
-

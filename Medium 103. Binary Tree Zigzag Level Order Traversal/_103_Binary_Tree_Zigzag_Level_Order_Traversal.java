@@ -1,40 +1,13 @@
-### 题意
+package leetcode;
 
-给出一棵二叉树，返回其节点值的锯齿形层次遍历（先从左往右，下一层再从右往左，层与层之间交替进行） 
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
 
-给出一棵二叉树 `{3,9,20,#,#,15,7}`,
-
-```
-    3
-   / \
-  9  20
-    /  \
-   15   7
-```
-
-返回其锯齿形的层次遍历为：
-
-```
-[
-  [3],
-  [20,9],
-  [15,7]
-]
-```
-
-### 思路
-
-与107基本相同，也是可以通过`queue`或者`helper`函数进行BFS遍历。
-
-只是用`queue`更方便，因为可以反序插入节点值。
-
-### 复杂度
-
-时间复杂度：O(n)
-
-空间复杂度：O(n)
-
-```java
+/**
+ * Created by Edward on 28/07/2017.
+ */
 public class BinaryTreeZigzagLevelOrderTraversal {
     /**
      time : O(n)
@@ -72,5 +45,3 @@ public class BinaryTreeZigzagLevelOrderTraversal {
         return res;
     }
 }
-```
-

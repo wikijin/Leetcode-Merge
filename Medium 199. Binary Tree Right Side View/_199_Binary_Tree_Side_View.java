@@ -1,36 +1,17 @@
-### 题意
+package leetcode;
 
-Given a binary tree, imagine yourself standing on the *right* side of it, return the values of the nodes you can see ordered from top to bottom.
+import java.util.*;
 
-输出二叉树每层的最右节点。
-
-样例：
-
-```
-   1            <---
- /   \
-2     3         <---
- \     \
-  5     4       <---
-
-```
-
-返回 `[1, 3, 4]`.
-
-### 思路
-
-思路一：用`queue`进行BFS遍历，返回每层`queue`的最右节点。
-
-思路二：用`helper`函数进行BFS遍历，注意向下递归时应该先右子树，再左子树。
-
-### 复杂度
-
-时间复杂度：O(n)
-
-空间复杂度：O(n)
-
-```java
 public class BinaryTreeRightSideView {
+
+    /**
+     time : O(n);
+     time ; O(n);
+     * @param root
+     * @return
+     */
+
+    public class BinaryTreeRightSideView {
     // helper BFS遍历
     public List<Integer> rightSideView(TreeNode root) {
         List<Integer> res = new ArrayList<>();
@@ -66,5 +47,4 @@ public class BinaryTreeRightSideView {
         return res;
     }
 }
-```
-
+}
