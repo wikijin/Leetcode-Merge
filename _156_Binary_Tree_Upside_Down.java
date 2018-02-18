@@ -70,7 +70,7 @@ public class BinaryTreeUpsideDown {
         TreeNode newRoot = upsideDownBinaryTree(root.left);
         root.left.left = root.right;
         root.left.right = root;
-        
+       
         root.left = null;
         root.right = null;
         return newRoot;
