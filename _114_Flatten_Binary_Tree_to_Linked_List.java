@@ -37,7 +37,7 @@ public class FlattenBinaryTreetoLinkedList {
                6
 
      题意：
-     把二叉树展开成链表。
+     把二叉树展开成链表(就地操作)。
      
      思路：
      
