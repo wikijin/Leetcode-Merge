@@ -72,9 +72,9 @@ public class FlattenBinaryTreetoLinkedList {
      
      * @param root
      */
-    private TreeNode prev = null;
+    private TreeNode prev = null; // 法一
 
-    public void flatten(TreeNode root) { // 法一
+    public void flatten(TreeNode root) { 
         if (root == null) return;
         flatten(root.right);
         flatten(root.left);
@@ -82,6 +82,7 @@ public class FlattenBinaryTreetoLinkedList {
         root.left = null;
         prev = root;
     }
+    
     public void flatten(TreeNode root) { // 法二
         if (root == null) return;
         flatten(root.left);
@@ -94,6 +95,7 @@ public class FlattenBinaryTreetoLinkedList {
             root.right = right;           // step 4: contatinate left flatten subtree with flatten right subtree
         }
     }
+    
     public void flatten2(TreeNode root) { // 法三
         if (root == null) return;
         Stack<TreeNode> stack = new Stack<>();
