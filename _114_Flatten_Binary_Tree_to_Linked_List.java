@@ -83,7 +83,7 @@ public class FlattenBinaryTreetoLinkedList {
         prev = root;
     }
     
-    public void flatten(TreeNode root) { // 法二
+    public void flatten1(TreeNode root) { // 法二
         if (root == null) return;
         flatten(root.left);
         flatten(root.right);
@@ -110,4 +110,4 @@ public class FlattenBinaryTreetoLinkedList {
             cur.left = null;
         }
     }
-}
+
