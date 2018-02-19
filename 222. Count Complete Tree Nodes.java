@@ -71,4 +71,4 @@ class Solution {
             return (1 << height) - 1;
         return 1 + countNodes(root.left) + countNodes(root.right);
     }
-}
+ }
